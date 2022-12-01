@@ -6,7 +6,7 @@ function Home() {
     <div className="homeContainer">
       <Header title="Home Page" />
       <div className="pageContainer">
-        <Form className="w-50">
+        <Form className="w-80">
           <Form.Group className="mb-3" controlId="formBasicBodyPart">
             <Form.Label>What body part would you like to evaluate?</Form.Label>
             <Form.Control
