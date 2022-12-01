@@ -1,9 +1,28 @@
+import { Button, Form } from "react-bootstrap";
+
 function Home() {
-    return (
-      <div className="homeContainer">
-        <h1>Home Page</h1>
-      </div>
-    );
-  }
-  
-  export default Home;
+  return (
+    <div className="homeContainer">
+      <h1>Home Page</h1>
+
+      <Form className="w-50">
+        <Form.Group className="mb-3" controlId="formBasicBodyPart">
+          <Form.Label>What body part would you like to evaluate?</Form.Label>
+          <Form.Control
+            as="select"
+            name="bodyPart"
+            // defaultValue={this.props.inputValues.state}
+            // onChange={this.props.handleChange}
+          >
+            <option value="ankle">Ankle</option>
+            <option value="knee">Knee</option>
+            <option value="hip">Hip</option>
+          </Form.Control>
+        </Form.Group>
+        <Button variant="primary">Next</Button>
+      </Form>
+    </div>
+  );
+}
+
+export default Home;
