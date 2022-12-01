@@ -1,11 +1,10 @@
-import NavBar from "./NavBar";
+import './Header.css';
 
-function Header() {
+function Header(props) {
   return (
-    <div className="headerContainer">
-      <h1>Sports Medicine Evals</h1>
-      <NavBar />
-    </div>
+      <header>
+        <h2>{props.title}</h2>
+      </header>
   );
 }
 

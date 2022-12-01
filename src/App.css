@@ -1,3 +1,34 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.main {
+    min-height: 85vh;
+}
+
+
+/* FOOTER STYLING */
+.footerContainer {
+    background-color: orange;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    margin-top: 15px;;
+}
+
+.footerContainer h6 {
+    margin: 0px;
+}
+
+/* STYLING FOR ALL FORMS */
+.pageContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
 Form {
     border: 3px solid grey;
     border-radius: 5px;

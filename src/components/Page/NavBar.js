@@ -1,28 +1,35 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import './NavBar.css'
 
 function NavBar() {
   return (
-    <div className="navBarContainer">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <NavLink
+    <Navbar className="navBarContainer">
+      <Container>
+        <Navbar.Brand id="brand" href="/">Sports Medicine Eval Hub</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          {/* <NavLink
             className={({ isActive }) => (isActive ? "LinkActive" : "Link")}
-            to="/"
+            href="/"
           >
             Home
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink
+          </NavLink> */}
+          {/* <NavLink
             className={({ isActive }) => (isActive ? "LinkActive" : "Link")}
-            to="/ankle"
+            href="/ankle"
           >
             Ankle
-          </NavLink>
-        </li>
-        {/* <li className="nav-item"><NavLink className={({ isActive }) => (isActive ? "LinkActive" : "Link")} to=""></NavLink></li> */}
-      </ul>
-    </div>
+          </NavLink> */}
+          <NavDropdown title="Body part" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/ankle">Ankle</NavDropdown.Item>
+            <NavDropdown.Item href="/knee">Knee</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/">Home</NavDropdown.Item>
+          </NavDropdown>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

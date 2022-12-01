@@ -1,0 +1,21 @@
+.navBarContainer {
+    background-color: rgb(255,165,0);
+}
+
+#brand {
+    color: white !important;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: rgb(255, 219, 153);
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#basic-nav-dropdown {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(255, 219, 153);
+    padding: 5px 20px;
+    border-radius: 10px;
+}
