@@ -24,7 +24,7 @@ function Ankle() {
       <Header title="Ankle Evaluation" />
       <div className="pageContainer">
         <Form className="">
-          <div id="patientDiv">
+          <div id="patientDiv" className=" formDiv">
             <h3>Patient Information</h3>
             <Form.Group className="mb-3" controlId="text">
               <Form.Label>Patient Name</Form.Label>
@@ -43,9 +43,10 @@ function Ankle() {
             </Form.Group>
           </div>
 
-          <div id="lateralityDiv">
+          <div id="lateralityDiv" className=" formDiv">
+          <h3>Inspection</h3>
             <Form.Group className="mb-3" controlId="laterality">
-              <Form.Label>Laterality</Form.Label>
+              {/* <Form.Label>Laterality</Form.Label> */}
               <div key={`inline-radio`} className="mb-3">
                 <Form.Check
                   inline
@@ -72,7 +73,7 @@ function Ankle() {
             </Form.Group>
           </div>
 
-          <div id="inspectionDiv">
+          <div id="inspectionDiv" className=" formDiv">
             <h3>Inspection</h3>
 
             <Form.Group className="mb-3" controlId="inspectionCheck">
@@ -121,7 +122,7 @@ function Ankle() {
             </Form.Group>
           </div>
 
-          <div id="palpationDiv">
+          <div id="palpationDiv" className=" formDiv">
             <h3>Palpation</h3>
             <Form.Group className="mb-3" controlId="palpationCheck">
               <Form.Label>Check Applicable Boxes:</Form.Label>
@@ -183,31 +184,31 @@ function Ankle() {
             </Form.Group>
           </div>
 
-          <div id="romDiv">
+          <div id="romDiv" className=" formDiv">
             <h3>ROM</h3>
             <h4>Passive</h4>
             <h4>Active</h4>
           </div>
 
-          <div id="mmtDiv">
+          <div id="mmtDiv" className=" formDiv">
             <h3>MMT</h3>
 
             <Row>
-              <Form.Label as={Col}></Form.Label>
-              <Form.Label as={Col}>Left</Form.Label>
-              <Form.Label as={Col}>Right</Form.Label>
+              <Form.Label as={Col} xs={6}></Form.Label>
+              <Form.Label as={Col} xs={2}>Left</Form.Label>
+              <Form.Label as={Col} xs={2}>Right</Form.Label>
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Dorsiflexion</Form.Label>
-              <Form.Group as={Col} controlId="dorsiLeftStrength">
+              <Form.Label as={Col} xs={6}>Dorsiflexion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="dorsiLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="dorsiRightStrength">
+              <Form.Group as={Col} xs={2} controlId="dorsiRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -217,15 +218,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Plantarflexion</Form.Label>
-              <Form.Group as={Col} controlId="plantarLeftStrength">
+              <Form.Label as={Col} xs={6}>Plantarflexion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="plantarLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="plantarRightStrength">
+              <Form.Group as={Col} xs={2} controlId="plantarRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -235,15 +236,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Inversion</Form.Label>
-              <Form.Group as={Col} controlId="inversionLeftStrength">
+              <Form.Label as={Col} xs={6}>Inversion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="inversionLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="inversionRightStrength">
+              <Form.Group as={Col} xs={2} controlId="inversionRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -253,15 +254,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Eversion</Form.Label>
-              <Form.Group as={Col} controlId="eversionLeftStrength">
+              <Form.Label as={Col} xs={6}>Eversion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="eversionLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="eversionRightStrength">
+              <Form.Group as={Col} xs={2} controlId="eversionRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -271,15 +272,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Great Toe Flexion</Form.Label>
-              <Form.Group as={Col} controlId="greatToeFlexLeftStrength">
+              <Form.Label as={Col} xs={6}>Great Toe Flexion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="greatToeFlexLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="greatToeFlexRightStrength">
+              <Form.Group as={Col} xs={2} controlId="greatToeFlexRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -289,15 +290,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Great Toe Extension</Form.Label>
-              <Form.Group as={Col} controlId="greatToeExtensionLeftStrength">
+              <Form.Label as={Col} xs={6}>Great Toe Extension</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="greatToeExtensionLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="greatToeExtensionRightStrength">
+              <Form.Group as={Col} xs={2} controlId="greatToeExtensionRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -307,15 +308,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Toes 2-5 Flexion</Form.Label>
-              <Form.Group as={Col} controlId="smallToesFlexLeftStrength">
+              <Form.Label as={Col} xs={6}>Toes 2-5 Flexion</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="smallToesFlexLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="smallToesFlexRightStrength">
+              <Form.Group as={Col} xs={2} controlId="smallToesFlexRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -325,15 +326,15 @@ function Ankle() {
             </Row>
 
             <Row className="mb-3">
-              <Form.Label as={Col}>Toes 2-5 Extension</Form.Label>
-              <Form.Group as={Col} controlId="smallToesExtensionLeftStrength">
+              <Form.Label as={Col} xs={6}>Toes 2-5 Extension</Form.Label>
+              <Form.Group as={Col} xs={2} controlId="smallToesExtensionLeftStrength">
                 <Form.Control as="select" name="leftStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
                   ))}
                 </Form.Control>
               </Form.Group>
-              <Form.Group as={Col} controlId="smallToesExtensionRightStrength">
+              <Form.Group as={Col} xs={2} controlId="smallToesExtensionRightStrength">
                 <Form.Control as="select" name="rightStrength">
                   {strengthOptions.map((val) => (
                     <option value={val}>{val}</option>
@@ -343,19 +344,19 @@ function Ankle() {
             </Row>
           </div>
 
-          <div id="specialTestsDiv">
+          <div id="specialTestsDiv" className=" formDiv">
             <h3>Special Tests</h3>
           </div>
 
-          <div id="dermDiv">
+          <div id="dermDiv" className=" formDiv">
             <h3>Dermatomes</h3>
           </div>
 
-          <div id="myoDiv">
+          <div id="myoDiv" className=" formDiv">
             <h3>Myotomes</h3>
           </div>
 
-          <div id="functionalDiv">
+          <div id="functionalDiv" className="formDiv">
             <h3>Functional Testing</h3>
             <Form.Group className="mb-3" controlId="functionalNotes">
               <Form.Label>Notes</Form.Label>

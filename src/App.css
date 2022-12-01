@@ -1,3 +1,10 @@
+:root {
+    --brightBlue: rgb(0,0,255);
+    --brightOrange: orange;
+    --lightBlue: rgb(100, 100, 255);
+    --lightOrange: rgb(255, 219, 153);
+}
+
 * {
     margin: 0;
     padding: 0; 
@@ -7,16 +14,17 @@
 
 .main {
     min-height: 85vh;
+    background-color: var(--brightOrange);
+    padding-bottom: 15px;
 }
 
 
 /* FOOTER STYLING */
 .footerContainer {
-    background-color: orange;
+    background-color: var(--brightOrange);;
     text-align: center;
     padding: 8px;
     color: white;
-    margin-top: 15px;;
 }
 
 .footerContainer h6 {
@@ -30,9 +38,19 @@
 }
 
 Form {
-    border: 3px solid grey;
-    border-radius: 5px;
+    border: 3px solid var(--lightBlue);
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
     margin: 0px 20px;
+    background-color: var(--brightBlue);
+}
+
+.formDiv {
+    background-color: var(--lightBlue);
+    margin: 10px;
+    border: 3px solid var(--lightOrange);
+    border-radius: 10px;
+    padding: 10px 40px;
+    color: white;
 }
