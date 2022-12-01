@@ -1,0 +1,7 @@
+/* attempt to make top 2 boxes same height always */
+/* #patientDiv, #inspectionDiv {
+    min-height:350px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+} */

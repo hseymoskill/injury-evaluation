@@ -32,10 +32,10 @@
 }
 
 /* STYLING FOR ALL FORMS */
-.pageContainer {
+/* .pageContainer {
     display: flex;
     justify-content: space-around;
-}
+} */
 
 Form {
     border: 3px solid var(--lightBlue);
