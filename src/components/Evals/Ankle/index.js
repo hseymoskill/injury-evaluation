@@ -1,7 +1,7 @@
 function Ankle() {
     return (
       <div className="ankleContainer">
-        <h1>It's me! Ankle!</h1>
+        <h1>Ankle Evaluation</h1>
       </div>
     );
   }
